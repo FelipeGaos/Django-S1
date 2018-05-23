@@ -10,7 +10,6 @@ class equipo(models.Model):
     def __str__(self):
          return self.nombre
 
-
 class jugador(models.Model):
     equipo = models.ForeignKey(equipo, null=True, blank=True, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=200)
@@ -26,7 +25,6 @@ class jugador(models.Model):
     def __str__(self):
          return self.nombre
     
-
 class entrenador(models.Model):
     nombre = models.CharField(max_length=200)
     apodo = models.CharField(max_length=50)
