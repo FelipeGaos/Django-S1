@@ -7,6 +7,8 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  min-height: 75rem;
+  padding-top: 4.5rem;
 }
 .footer {
   position: absolute;
@@ -28,3 +30,6 @@ body {
   max-width: 680px;
   padding: 0 15px;
 }
+
+
+/* Show it is fixed to the top */

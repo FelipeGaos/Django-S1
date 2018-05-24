@@ -4,11 +4,16 @@
 <head>
 
 	<link rel="stylesheet" href="{% static 'src/css/bootstrap.min.css'%}">
-	<link rel="stylesheet" href="{% static 'src/css/footer.css'%}">
+	<link rel="stylesheet" href="{% static 'src/css/extra.css'%}">
 	<meta charset="utf-8">
-	<title>{% block title %}Demo {% endblock %}</title>
+	<title>{% block title %}Juegos{% endblock %}</title>
 </head>
 	<body >
+		{% block navbar %}
+		{% include 'base/navbar.html'%}
+		{% endblock %}
+
+
 		{% block header %}
 		{% include 'base/header.html'%}
 		{% endblock %}
