@@ -1,0 +1,46 @@
+{% extends 'base/layout.html' %}
+
+{% block header %}
+    <title>Jugadores Inscritos</title>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-8 mx-auto">
+			<table class="table table-striped">
+			  <thead>
+			    <tr>
+			      <th scope="col">Nombre</th>
+			      <th scope="col">Apodo</th>
+			      <th scope="col">Fecha Nacimiento</th>
+			      <th scope="col">Edad</th>
+			      <th scope="col">Estatura</th>
+			      <th scope="col">Peso</th>
+			      <th scope="col">Poscicion</th>
+			      <th scope="col">Foto</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  	{% if jugadores %}
+			  	{% for jugador in jugadores %}
+			    <tr>
+			      <th>{{ jugador.nombre }}</th>
+			      <th>{{ jugador.apodo }}</th>
+			      <th>{{ jugador.edad }}</th>
+			      <th>{{ jugador.fecha_nac }}</th>
+				  <th>{{ jugador.estatura }}</th>
+			      <th>{{ jugador.peso }}</th>
+			      <th>{{ jugador.poscicion }}</th>
+			      <th>{{ jugador.foto }}</th>
+
+			    </tr>
+			    {% endfor %}
+			    {% endif %}
+			  </tbody>
+			</table>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
