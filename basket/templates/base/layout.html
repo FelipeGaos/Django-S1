@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang=es>
+<head>
+
+	<link rel="stylesheet" href="{% static 'src/css/bootstrap.min.css'%}">
+	<link rel="stylesheet" href="{% static 'src/css/extra.css'%}">
+	<meta charset="utf-8">
+	<title>{% block title %}Juegos{% endblock %}</title>
+</head>
+	<body >
+		{% block navbar %}
+		{% include 'base/navbar.html'%}
+		{% endblock %}
+
+
+		{% block header %}
+		{% include 'base/header.html'%}
+		{% endblock %}
+
+		{% block content %}
+		<p>Contenido Bloque Base</p>
+		{% endblock %}
+
+		{% block footer %}
+		{% include 'base/footer.html'%}
+		{% endblock %}
+	</body>
+
+	<script src="{% static 'src/jquery/jquery.js'%}"></script>
+	<script src="{% static 'src/js/bootstrap.min.js'%}"></script>
+</html>
